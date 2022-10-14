@@ -1,0 +1,20 @@
+version: '3'
+services:
+  php:
+    image: php:8.1-fpm
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './src:/var/www/html'
+
+  composer:
+    image: composer:latest
+    depends_on:
+      - php
+      - nginx
+      - database
+    volumes:
+      - './src:/var/www/html'
+    working_dir: /var/www/html
+    command: composer install

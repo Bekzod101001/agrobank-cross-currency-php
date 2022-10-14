@@ -1,0 +1,18 @@
+{
+    "name": "itprogressuz/php-agrobank-currency-test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Bekzod",
+            "email": "bekzod101001@gmail.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "app\\": "./"
+      }
+    },
+    "require": {
+      "ext-pdo": "*"
+    }
+}
